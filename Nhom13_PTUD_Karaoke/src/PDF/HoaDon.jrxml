@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0ad88b9d-a05c-4acf-a3a7-c2bc75f0f961">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="151"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT   dbo.PhieuDatPhong.MaPhieuDatPhong AS Expr1, dbo.PhieuDatPhong.GioNhanPhong, dbo.PhieuDatPhong.NgayDatPhong, dbo.HoaDon.MaHoaDon AS Expr2, dbo.HoaDon.GioTraPhong AS Expr3, dbo.HoaDon.NgayLapHD AS Expr4, 
+                dbo.KhachHang.MaKhachHang, dbo.KhuyenMai.MaKhuyenMai, dbo.KhuyenMai.ChietKhau, dbo.PhieuDichVu.MaPhieuDichVu, dbo.NhanVien.MaNhanVien, dbo.HoaDon.MaKM AS Expr5, dbo.HoaDon.MaNV AS Expr6, dbo.HoaDon.MaKH AS Expr7, 
+                dbo.HoaDon.MaP AS Expr8, dbo.HoaDon.TrangThaiThanhToan AS Expr9, dbo.HoaDon.*
+FROM      dbo.CT_HoaDon INNER JOIN
+                dbo.CT_PhieuDatPhong ON dbo.CT_HoaDon.MaPDP = dbo.CT_PhieuDatPhong.MaPDP INNER JOIN
+                dbo.CT_PhieuDichVu ON dbo.CT_HoaDon.MaPDV = dbo.CT_PhieuDichVu.MaPDV INNER JOIN
+                dbo.DichVu ON dbo.CT_HoaDon.MaDV = dbo.DichVu.MaDichVu AND dbo.CT_PhieuDichVu.MaDV = dbo.DichVu.MaDichVu INNER JOIN
+                dbo.HoaDon ON dbo.CT_HoaDon.MaHD = dbo.HoaDon.MaHoaDon INNER JOIN
+                dbo.KhachHang ON dbo.HoaDon.MaKH = dbo.KhachHang.MaKhachHang INNER JOIN
+                dbo.KhuyenMai ON dbo.HoaDon.MaKM = dbo.KhuyenMai.MaKhuyenMai INNER JOIN]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="176" y="20" width="236" height="36" uuid="17259daf-4618-4a6e-a8ba-6214e04e4ed1"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hoá đơn thanh toán]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

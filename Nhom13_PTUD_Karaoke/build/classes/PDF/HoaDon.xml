@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<root>
+    <customer_info>
+        <name>Nguyen Van A</name>
+        <phone>0123456789</phone>
+        <email>nguyenvana@email.com</email>
+    </customer_info>
+    <invoice_details>
+        <item>
+            <name>Song A</name>
+            <price>2.5</price>
+            <quantity>2</quantity>
+            <subtotal>5.0</subtotal>
+        </item>
+        <item>
+            <name>Song B</name>
+            <price>3.0</price>
+            <quantity>1</quantity>
+            <subtotal>3.0</subtotal>
+        </item>
+    </invoice_details>
+    <total>8.0</total>
+</root>
+
